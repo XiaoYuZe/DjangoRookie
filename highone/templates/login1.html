@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+login please
+{% endblock %}
+
+{% block text %}
+<h1>登陆页面1：</h1>
+<form method = 'post' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{uf.as_p}}
+    <input type="submit" value = "ok" />
+</form>
+{% endblock %}
+
+{% block konsten %}
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">  
+body { color: #edf; ; padding: 0 5em; margin:15em }  
+h1 { padding: 2em lem; background:#675 }  
+h2 { color: #bf8; border-top: 1px dotted #fff; margin-top: 2em }  
+p { margin: lem 0 }  
+ul { list-style: none;}
+li { float: left;}
+a { display: block;padding: 0 16px}
+nav{ 
+height:50px; 
+width:100%;
+position:fixed;
+
+top:0; 
+left:0; 
+right:0;
+z-index:999; 
+}
+</style>
+<head>
+	<title>{% block title %}database{% endblock %}</title>
+</head>
+
+<body style="background:url('/static/snowf.jpg');">
+
+	<nav id="nav" style="align:top;">
+	  <ul>
+	    <li><a href="/" style="color: #b0a4e3">首页</a></li>
+	    <li><a href="/one" style="color: #b0a4e3">第一页</a></li>
+	    <li><a href="/two" style="color: #b0a4e3">大二页</a></li>
+	    <li><a href="/thd" style="color: #b0a4e3">小三也</a></li>
+	    <li><a href="/fth" style="color: #b0a4e3">Hobby</a></li>
+	    <li><a href="/fita" style="color: #b0a4e3">鸡数菊</a></li>
+	    <li><a href="/monolog" style="color: #b0a4e3">书简</a></li>
+	  </ul>
+	</nav>
+
+	<div id='rom'>
+		{% block text %} 
+		<h1>This is a very fun game </h1>
+		<h2>Zoo Alone</h2>
+		{% endblock %}
+	</div>
+
+	<div id='ram'>
+		{% block konsten %}
+		康斯坦丁
+		{% endblock %}
+	</div>
+
+
+</body>
+</html>

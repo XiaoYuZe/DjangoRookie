@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block text %}
+	<table border="1">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>rank</th>
+				<th>type</th>
+				<th>profile</th>
+				<th>price</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for object in objects %}
+				<tr>
+					<td>{{object.name}}</td>
+					<td>{{object.rank}}</td>
+					<td>{{object.modn}}</td>
+					<td>{{object.prof}}</td>
+					<td>{{object.pric}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
+
+{% block konsten %}
+{% endblock %}

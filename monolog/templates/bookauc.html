@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2nd Book Store</title>
+	<style>
+		table,td,th
+		{
+			border:1px solid black;
+			color:black;
+		}
+		table
+		{
+			width:100%;
+		}
+		th
+		{
+			height:50px;
+		}
+		a
+		{
+			background: pink;
+			color:blue;
+		}
+		div
+		{
+			padding: 5px;
+		}
+		body
+		{ color: #edf; ; padding: 0 5em; margin:15em }  
+
+	</style>	
+</head>
+<body>
+	<div>
+		<a href='/{{ monolog_DIR }}/book'>1</a>
+		<a href='/{{ monolog_DIR }}/cata'>2</a>
+		<a href='/{{ monolog_DIR }}/subject'>3</a>
+		<a href='/'>homepage</a>
+	</div>
+<!-- 	{% for obj in objects %}
+	<div>
+		<h3>BookName</h1>
+		<p>{{ obj.title }}</p>
+	</div>
+	<div>
+		<h3>Author</h2>
+		<p>{{ obj.author }}</p>
+	</div>
+	<div>
+		<h3>Press</h3>
+		<p>{{ obj.press }}</p>
+	</div>
+	{% endfor %} -->
+
+	<div>
+		<table>
+			<tr>
+				<th>BookName</th>
+				<th>Author</th>
+				<th>Press</th>
+			</tr>
+
+			{% for obj in objects %}
+			<tr>
+				<td><p>{{ obj.title }}</p></td>
+				<td><p>{{ obj.author }}</p></td>
+				<td><p>{{ obj.press }}</p></td>
+			</tr>
+			{% endfor %}	
+		</table>
+	</div>
+	
+
+</body>
+</html>

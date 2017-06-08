@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block text %}
+	<table border="1">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>案件编号</th>
+				<th>法院</th>
+				<th>公告内容</th>
+				<th>添加时间</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for object in objects %}
+				<tr>
+					<td>{{object.0}}</td>
+					<td>{{object.1}}</td>
+					<td>{{object.2}}</td>
+					<td>{{object.3}}</td>
+					<td>{{object.5}}</td>
+				</tr>
+
+			{% endfor %}
+		</tbody>
+	</table>
+	<div class="pagination">
+	    <span class="step-links">
+	    	<span class='first'><a href='?page={{contains.paginator.start_index}}'>首页</a></span>
+	        {% if contains.has_previous %}
+	            <a href="?page={{ contains.previous_page_number }}">previous</a>
+	        {% endif %}
+
+	        <span class="current">
+	            Page {{ contains.number }} of {{ contains.paginator.num_pages }}.
+	        </span>
+
+	        {% if contains.has_next %}
+	            <a href="?page={{ contains.next_page_number }}">next</a>
+	        {% endif %}
+	        <span class='last'><a href='?page={{contains.paginator.num_pages}}'>尾页</a></span>
+	    </span>
+	</div>
+{% endblock %}
+
+{% block konsten %}
+	北京法院公告在此呈现
+{% endblock %}

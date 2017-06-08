@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+	{% load static %}
+	<script type="text/javascript" src={% static '/js/jquery.min.js' %}></script>
+	<script type="text/javascript" src={% static '/bootstrap/js/bootstrap.js' %}></script>
+	<link href={% static '/bootstrap/css/bootstrap.css' %} rel='text/stylesheet' type='text/css'></link>
+	<title>
+	{% block title %}
+	monolog-homepage
+	{% endblock %}
+	</title>
+</head>
+<body style="background:url({% static '/pic/cat.jpg' %});">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<a class="navbar-brand" href='/{{ monolog_DIR }}/book'>book</a>
+		<a class="navbar-brand" href='/{{ monolog_DIR }}/cata'>catalog</a>
+		<a href='/{{ monolog_DIR }}/subject'>subject</a>
+		<a href='/'>homepage</a>
+	</nav>
+	<div class='container'>
+	{% block body %}
+	I'm body.
+	{% endblock %}
+	</div>
+	<div id='zz' onclick="$(this).text('Library OverwHelm')">
+	图书大作战
+	</div>
+	<div id='sp' onclick="$(this).text('Horizen Paradise')">
+	水平天国
+	</div>	
+		<button onclick="$('zzd').click(alert('Button Test For the 1st Javascript'))">变化</button>
+		<button onclick="$('document').ready(text('图书'))">变o化</button>
+	<div>
+	<ul>
+		<li><u>This is a underline paragraph,not a link</u></li>
+		<li><s>This is a text no longer use</s></li>
+		<li><em>italicized text</em></li>
+		<li>hello is <kbd>ease ways</kbd>,insert the keyword <kbd>python</kbd> to call python</li>
+	</ul>
+	</div>
+
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+	    <span class="sr-only">60% Complete</span>
+	  </div>
+	</div>	
+	<div class="btn-group">
+	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    Action <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu">
+	    <li><a href="#">Action</a></li>
+	    <li><a href="#">Another action</a></li>
+	    <li><a href="#">Something else here</a></li>
+	    <li role="separator" class="divider"></li>
+	    <li><a href="#">Separated link</a></li>
+	  </ul>
+	</div>	
+
+	
+</body>

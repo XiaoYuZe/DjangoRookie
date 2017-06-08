@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src='/static/js/jquery.min.js'></script>
+	<script type="text/javascript" src='/static/bootstrap/js/bootstrap.js'></script>
+	<link href='/static/bootstrap/css/bootstrap.css' rel='text/stylesheet' type='text/css'></link>
+	<title>Book Catalog</title>
+</head>
+<body>
+	<a href='/{{monolog_DIR}}/book'>2</a>
+	<div>
+		<h1>BookName</h1>
+		{% block bn %}
+		<p>cata</p>
+		{% endblock %}
+	</div>
+	<div>
+		<h2>Catalog_Code</h2>
+	</div>
+	<div>
+		<h3>Catalog_Name</h3>
+	</div>
+	<div class="action-header">
+	    <div class="container">
+	        <div class="action-header__item action-header__item--search">
+	            <form method="get" action="{% url 'index' %}">
+	                <input type="text" class="hidden-sm hidden-xs" placeholder="在这里可以输入你要搜索的关键字~" name="search"><!-- For desktop -->
+	                <input type="text" class="visible-xs visible-sm" placeholder="Search..." name="search_sm"><!-- For desktop -->
+	                <input type="submit" style="display: none">
+	            </form>
+	        </div>
+	    </div>
+</div>	
+</body>
+</html>
